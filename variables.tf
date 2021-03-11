@@ -2,8 +2,8 @@ variable "region" {
     description = "Region into which to deploy the EC2 instance"
 }
 
-variable "ami" {
-    description = "AMI"
+variable "linux_ami" {
+    description = "Linux ami to use"
 }
 
 variable "instance_type" {

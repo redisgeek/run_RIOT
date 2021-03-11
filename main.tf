@@ -18,7 +18,7 @@ data "template_file" "user_data" {
 }
 
 resource "aws_instance" "riot" {
-  ami                         = var.ami
+  ami                         = var.linux_ami
   associate_public_ip_address = true
   instance_type               = var.instance_type
   key_name                    = var.ssh_key_name

@@ -22,5 +22,12 @@ terraform plan
 terraform apply
 ```
 
-The output gives you the string to run to execute riot-redis locally (assuming your ssh keyname can be converted to the path to the key file!)
+The output gives you the string to run to execute riot-redis locally (assuming your ssh keyname can be converted to the path to the key file!). Here's an example:
 
+```
+run_riot = "ssh -i ~/.ssh/toby-kp.pem ec2-user@3.235.224.142 /usr/local/bin/riot-redis"
+```
+
+# CAVEATS
+- AWS/EC2 specific only
+- Expects a linux distro
