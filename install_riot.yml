@@ -1,0 +1,14 @@
+#cloud-config
+
+# Required packages
+packages:
+  - java
+  - wget
+
+# Commands to run
+runcmd:
+  - su -l ec2-user -c "wget -qq https://github.com/redis-developer/riot/releases/download/v2.6.2/riot-redis-2.6.2.zip"
+  - su -l ec2-user -c "unzip -q riot-redis-2.6.2.zip"
+  - ln -s ~ec2-user/riot-redis-2.6.2/bin/riot-redis /usr/local/bin
+  
+
