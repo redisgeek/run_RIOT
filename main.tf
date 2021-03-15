@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 data "template_file" "user_data" {
-  template = file("install_riot.yml")
+  template = file("${path.module}/install_riot.yml")
 }
 
 resource "aws_instance" "riot" {
